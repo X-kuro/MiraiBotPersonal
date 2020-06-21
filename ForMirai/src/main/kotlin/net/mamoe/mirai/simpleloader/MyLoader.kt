@@ -1,8 +1,6 @@
 package net.mamoe.mirai.simpleloader
 
 import com.google.gson.Gson
-import com.sun.xml.internal.ws.client.sei.ResponseBuilder
-import io.ktor.http.Url
 import net.kuroi.httpok.repack.buildMsg
 import net.kuroi.httpok.repack.getDataByGet
 import net.kuroi.httpok.repack.getDataByPost
@@ -14,15 +12,25 @@ import net.mamoe.mirai.event.events.MemberMuteEvent
 import net.mamoe.mirai.event.subscribeAlways
 import net.mamoe.mirai.event.subscribeMessages
 import net.mamoe.mirai.join
-import net.mamoe.mirai.message.FriendMessageEvent
 import net.mamoe.mirai.message.GroupMessageEvent
-import net.mamoe.mirai.message.MessageEvent
 import net.mamoe.mirai.message.data.PlainText
 import net.mamoe.mirai.message.data.content
 import java.io.File
 import java.net.URL
+import javax.swing.JFrame
+import javax.swing.JLabel
+
 
 suspend fun main() {
+//    val frame = JFrame("HelloWorldSwing")
+//    frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+//
+//    // 添加 "Hello World" 标签
+//    val label = JLabel("Hello World")
+//    frame.contentPane.add(label)
+//    frame.pack();
+//    frame.setVisible(true)
+
     val qqId = 501621053L//Bot的QQ号，需为Long类型，在结尾处添加大写L
     val password = "qqjerome1993"//Bot的密码
     val miraiBot = Bot(qqId, password).alsoLogin()//新建Bot并登录
